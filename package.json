@@ -1,0 +1,27 @@
+{
+  "name": "bmw",
+  "version": "0.1.0",
+  "description": "Personal command-line utility",
+  "main": "bmw.js",
+  "scripts": {
+    "test": "grunt test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/benwilhelm/bmw-node.git"
+  },
+  "keywords": [
+    "cli",
+    "bmw"
+  ],
+  "author": "Ben Wilhelm <ben@doublebeamdesign.com> (http://doublebeamdesign.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/benwilhelm/bmw-node/issues"
+  },
+  "homepage": "https://github.com/benwilhelm/bmw-node",
+  "dependencies": {
+    "commander": "^2.3.0",
+    "request": "^2.39.0"
+  }
+}
