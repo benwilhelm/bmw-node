@@ -1,6 +1,6 @@
 {
   "name": "bmw",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Personal command-line utility",
   "main": "bmw.js",
   "scripts": {
@@ -22,6 +22,7 @@
   "homepage": "https://github.com/benwilhelm/bmw-node",
   "dependencies": {
     "commander": "^2.3.0",
-    "request": "^2.39.0"
+    "request": "^2.39.0",
+    "crypto": "0.0.3"
   }
 }
