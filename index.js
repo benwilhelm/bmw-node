@@ -1,21 +1,19 @@
 #!/usr/bin/env node
 
 var bmw = require('./bmw')
-  , pkgJson = require('./package.json')
-  , githubCreateRepo = require('./cmd/github-create-repo')
-  , lipsum = require('./cmd/lipsum')
-  , randString = require('./cmd/randString')
-  , shorten = require('./cmd/shorten')
+  , fs = require('fs')
+  , commandPaths = fs.readdirSync('./cmd')
+  , pkgJson = require('package.json')
   ;
 
-bmw
-.version(pkgJson.version)
-//.addCommand(require('./cmd/example'))
+bmw.version(pkgJson.version);
 
-.addCommand(githubCreateRepo)
-.addCommand(lipsum)
-.addCommand(randString)
-.addCommand(shorten)
-.parse(process.argv)
-;
+commandPaths.forEach(function(path){
+  if (path.substr(-3) === '.js') {
+    command = require('./cmd/' + path);
+    bmw.addCommand(command);
+  }
+});
+
+bmw.parse(process.argv);
 

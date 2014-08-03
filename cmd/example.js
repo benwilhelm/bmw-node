@@ -1,7 +1,5 @@
 /**
  * This is only meant as a template for creating other commands.
- * If you want to run it, you need to uncomment the line that 
- * registers the command in index.js
  */
 
 var command = require('commander');
