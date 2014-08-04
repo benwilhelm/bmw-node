@@ -3,7 +3,7 @@
 var bmw = require('./bmw')
   , fs = require('fs')
   , commandPaths = fs.readdirSync('./cmd')
-  , pkgJson = require('package.json')
+  , pkgJson = require('./package.json')
   ;
 
 bmw.version(pkgJson.version);
