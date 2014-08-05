@@ -2,7 +2,7 @@
 
 var bmw = require('./bmw')
   , fs = require('fs')
-  , commandPaths = fs.readdirSync('./cmd')
+  , commandPaths = fs.readdirSync(__dirname + '/cmd')
   , pkgJson = require('./package.json')
   ;
 
