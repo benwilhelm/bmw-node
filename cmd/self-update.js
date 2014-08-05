@@ -14,8 +14,13 @@ module.exports = {
     var root = path.resolve(__dirname + "/..");
     console.log(root);
     cd(root);
+
+    console.log("Linking post-merge git hook");
     ln('-s', 'git-hooks/post-merge', '.git/hooks/post-merge');
+    
+    console.log("Linking post-commit git hook");
     ln('-s', 'git-hooks/post-commit', '.git/hooks/post-commit');
+    
     exec('git checkout master');
     exec('git pull');
   }
