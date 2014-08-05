@@ -12,9 +12,9 @@ module.exports = {
 
   action: function(arg, options) {
     var root = path.resolve(__dirname + "/..");
-    console.log(root);
     cd(root);
 
+    console.log("");
     console.log("Linking post-merge git hook");
     ln('-s', 'git-hooks/post-merge', '.git/hooks/post-merge');
     
