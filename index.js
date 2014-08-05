@@ -8,7 +8,6 @@ var bmw = require('./bmw')
 
 bmw.version(pkgJson.version);
 
-
 commandPaths.forEach(function(path){
   if (path.substr(-3) === '.js') {
     command = require('./cmd/' + path);
